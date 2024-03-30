@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 6834), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0, user-scalable=yes">
+
+  <title>example.md</title>
+  <style type="text/css">
+/**
+  * Prism.s theme ported from highlight.js's xcode style
+  */
+  pre code {
+  padding: 1em;
+  }
+  .token.comment {
+  color: #007400;
+  }
+  .token.punctuation {
+  color: #999;
+  }
+  .token.tag,
+  .token.selector {
+  color: #aa0d91;
+  }
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol {
+  color: #1c00cf;
+  }
+  .token.property,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin {
+  color: #c41a16;
+  }
+  .token.inserted {
+  background-color: #ccffd8;
+  }
+  .token.deleted {
+  background-color: #ffebe9;
+  }
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+  color: #9a6e3a;
+  }
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+  color: #836c28;
+  }
+  .token.function,
+  .token.class-name {
+  color: #DD4A68;
+  }
+  .token.regex,
+  .token.important,
+  .token.variable {
+  color: #5c2699;
+  }
+  .token.important,
+  .token.bold {
+  font-weight: bold;
+  }
+  .token.italic {
+  font-style: italic;
+  }
+  </style>
+  <style type="text/css">
+body {
+  font-family: -apple-system, Helvetica, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  box-sizing: border-box;
+  background-color: #fffff8;
+  color: #111;
+  }
+  body, .footnotes, code { font-size: .9em; }
+  li li { font-size: .95em; }
+  *, *:before, *:after {
+  box-sizing: inherit;
+  }
+  pre, img { max-width: 100%; 
+    max-height: 90%; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  pre, pre:hover {
+  white-space: pre-wrap;
+  word-break: break-all;
+  }
+  pre code {
+  display: block;
+  overflow-x: auto;
+  }
+  code { font-family: Menlo, Consolas, Courier, monospace; }
+  :not(pre) > code, code[class] { background-color: #F8F8F8; }
+  code.language-undefined, pre > code:not([class]) {
+  background-color: rgba(0,0,0, 0.1);
+  /* border: 1px solid #eee; */
+  }
+  table {
+  margin: auto;
+  border-top: 1px solid #666;
+  }
+  table thead th { border-bottom: 1px solid #ddd; }
+  th, td { padding: 5px; }
+  thead, tfoot, tr:nth-child(even) { background: rgba(0,0,0, 0.1); }
+  blockquote {
+  color: rgba(0,0,0, 0.8);
+  margin: 0;
+  font-style: italic;
+  padding-left: 1em;
+  border-left: 0.5em solid rgba(0,0,0, 0.2);
+  }
+  hr, .footnotes::before { border: 1px dashed #ddd; }
+  .frontmatter { text-align: center; }
+  #TOC .numbered li { list-style: none; }
+  #TOC .numbered { padding-left: 0; }
+  #TOC .numbered ul { padding-left: 1em; }
+  table, .body h2 { border-bottom: 1px solid #666; }
+  .body .appendix, .appendix ~ h2 { border-bottom-style: dashed; }
+  .footnote-ref a::before { content: "["; }
+  .footnote-ref a::after { content: "]"; }
+  section.footnotes::before {
+  content: "";
+  display: block;
+  max-width: 20em;
+  }
+
+  @media print {
+  body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+  tr, img { page-break-inside: avoid; }
+  }
+  @media only screen and (min-width: 992px) {
+  pre { white-space: pre; }
+  }
+  </style>
+  <style type="text/css">
+:root { --slide-width: 100%; }
+  html { scroll-snap-type: y mandatory; }
+  th, td { padding: .2em .5em; }
+  .slide {
+  padding: 1em;
+  position: relative;
+  }
+  .slide > h2, .slide > h3 { margin-top: unset; }
+  body {
+  max-width: fit-content;
+  padding: 0;
+  }
+  a { color: #eb4a47; text-decoration: none; }
+  :not(pre) > code { background-color: #fdfded; }
+  #TOC { columns: 2; }
+  #TOC::before {
+  font-size: 1.3em;
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px solid #666;
+  }
+  .frontmatter, .middle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+  .page-number, .timer {
+  position: absolute;
+  bottom: 0;
+  opacity: .5;
+  font: .7em monospace;
+  }
+  .page-number { right: 0; }
+  .timer { left: 0; }
+  .inverse {
+  background-color: #eee;
+  filter: invert(1);
+  }
+  .fade {
+  background: repeating-linear-gradient(135deg, white, white 30px, #ddd 32px, #ddd 32px);
+  opacity: 0.6;
+  }
+  .center { text-align: center; }
+  .slide-container h2 .section-number {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  padding: 0 .1em;
+  margin-right: .3em;
+  }
+  .overview {
+  font-size: .8em;
+  max-width: none;
+  }
+  .overview .slide {
+  min-height: unset;
+  scroll-snap-align: unset;
+  }
+  .overview .slide-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
+  .overview .slide-container .slide {
+  width: var(--slide-width);
+  border: 1px dotted #ccc;
+  margin-bottom: 0.5em;
+  }
+  .mirrored { transform: scale(-1, 1); }
+  .spacer { height: 50vh; }
+  .overview .timer, .overview .spacer { display: none; }
+  .overview .footnotes { position: unset; }
+  html:fullscreen::-webkit-scrollbar { display: none; }
+  html:fullscreen {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  }
+  @media (min-width: 992px) {
+  :root { --slide-width: 49%; }
+  body { font-size: 2em; }
+  .slide {
+    min-height: 100vh;
+    scroll-snap-align: start;
+  }
+  li li { font-size: .9em; }
+  .footnotes {
+    position: absolute;
+    bottom: 1em;
+    font-size: .8em;
+  }
+  }
+  @media (min-width: 1400px) {
+  :root { --slide-width: 33%; }
+  }
+  @media (min-width: 1800px) {
+  :root { --slide-width: 24.67%; }
+  }
+  @media print, (max-width: 991.98px) {
+  .timer, .spacer { display: none; }
+  }
+  </style>
+  <link rel="stylesheet" href=
+  "https://cdn.jsdelivr.net/combine/npm/@xiee/utils/css/key-buttons.min.css,npm/@xiee/utils/css/heading-anchor.min.css"
+  type="text/css">
+</head>
+
+<body>
+<a name="Markdown-Slides"></a>
+<h1>Markdown Slides</h1>
+
+<p><a href="mailto:lindig@gmail.com"><em>Christian Lindig</em></a></p>
+
+<p><img src="https://placehold.co/600x400" alt="Image" /></p>
+
+<a name="Generating-HTML"></a>
+<h2>Generating HTML</h2>
+
+<p>Processing the slides using <code>theme</code> from <a href="https://www.pell.portland.or.us/~orc/Code/discount/">Discount</a>, a
+Markdown implementation in C:</p>
+
+<pre><code>    theme -f slides.theme example.md
+</code></pre>
+
+<a name="Organisation"></a>
+<h2>Organisation</h2>
+
+<ul>
+<li>Each H2 header introduces a new slide</li>
+<li>The result is a single HTML file</li>
+<li>Scrolling snaps to slides</li>
+</ul>
+
+
+<a name="Tables"></a>
+<h2>Tables</h2>
+
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Event                       </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2010</td>
+<td>WCH Karapiro, New Zealand   </td>
+</tr>
+<tr>
+<td>2011</td>
+<td>WCH Bled, Slovenia          </td>
+</tr>
+<tr>
+<td>2012</td>
+<td>2012 WSJCH Plovdiv, Bulgaria</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>WCH Chungju, Korea          </td>
+</tr>
+<tr>
+<td>2014</td>
+<td>WCH Amsterdam, NED          </td>
+</tr>
+<tr>
+<td>2015</td>
+<td>WCH Aiguebelette, France    </td>
+</tr>
+<tr>
+<td>2016</td>
+<td>WCHIE Rotterdam, Netherlands</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>WCH Rotterdam, Netherlands  </td>
+</tr>
+<tr>
+<td>2017</td>
+<td>WCH Sarasota-Bradenton, USA </td>
+</tr>
+</tbody>
+</table>
+
+
+<a name="Markdown-Basics"></a>
+<h2>Markdown Basics</h2>
+
+<blockquote><p>Only when the tide goes out do you discover who&rsquo;s been swimming naked.
+&ndash; Warren Buffet</p></blockquote>
+
+<p>A paragraph with <em>italic</em> and <strong>bold</strong> emphasis. Some niceties here: &frac12;
+and &frac34;. Likewise &trade;. How about links to <a href="https://github.com">GitHub</a>?</p>
+
+<p><img src="https://placehold.co/600x400" alt="Image" /></p>
+
+<script type="text/javascript">
+(function(d) {
+    let p = d.body;  // container of slides; assume <body> for now
+    const s1 = ':scope > hr:not([class])', s2 = ':scope > h2';
+    // find a container that has at least n "slides"
+    function findContainer(s, n = 1) {
+    if (p.querySelectorAll(s).length >= n) return true;
+    // if body doesn't contain headings or <hr>s, look into children
+    for (let i = 0; i < p.children.length; i++) {
+      if (p.children[i].querySelectorAll(s).length >= n) {
+        p = p.children[i]; break;
+      }
+    }
+    return false;
+    }
+    function newEl(tag, cls) {
+    const el = d.createElement(tag);
+    if (cls) el.className = cls;
+    return el;
+    }
+    if (!findContainer(s1, 3)) {
+    // if not enough <hr>s found in children; look for <h2> instead
+    if (p.tagName === 'BODY') {
+      // not enough h2 found, this page is not appropriate for slides
+      if (!findContainer(s2) && p.tagName === 'BODY') return;
+      p.querySelectorAll(s2).forEach(h2 => h2.before(newEl('hr')));
+    }
+    }
+    p.classList.add('slide-container');
+    // add 'slide' class to the frontmatter div and toc
+    ['.frontmatter', '#TOC'].forEach(s => {
+    d.body.querySelector(s)?.classList.add('slide');
+    });
+
+    function newSlide(s) {
+    return (s?.innerText === '') ? s : newEl('div', 'slide');
+    }
+    function isSep(el) {
+    return el.tagName === 'HR' && el.attributes.length === 0;
+    }
+    let el = p.firstElementChild; if (isSep(el)) el.remove();
+    el = p.firstElementChild; if (!el) return;
+    let s = newSlide(); el.before(s);
+    while (true) {
+    let el = s.nextSibling;
+    if (!el) break;
+    // remove slide separators (<hr>) and create new slide
+    if (isSep(el)) {
+      s = newSlide(s);
+      el.before(s); el.remove();
+    } else if (el.classList?.contains('slide')) {
+      s = newSlide(s);
+      el.after(s);
+    } else {
+      s.append(el);
+    }
+    }
+    function setAttr(el, attr) {
+    const m = newEl('div');
+    m.innerHTML = `<div ${attr}><\/div>`;
+    const attrs = m.firstElementChild.attributes;
+    for (let i = 0; i < attrs.length; i++) {
+      let a = attrs[i];
+      el.setAttribute(a.name, a.value);
+    }
+    m.remove();
+    }
+    const slides = d.querySelectorAll('div.slide'), N = slides.length,
+        tm = d.querySelector('span.timer'), fn = d.querySelector('.footnotes');
+    slides.forEach((s, i) => {
+    // append footnotes
+    if (fn) s.querySelectorAll('.footnote-ref > a[href^="#fn"]').forEach(a => {
+      const li = fn.querySelector('li' + a.getAttribute('href'));
+      if (!li) return;
+      let f = s.querySelector('section.footnotes');
+      if (!f) {
+        f = newEl('section', 'footnotes'); s.append(f);
+      }
+      f.append(li);
+      li.firstElementChild?.insertAdjacentHTML('afterbegin', `[${a.innerHTML}] `);
+      li.outerHTML = li.innerHTML;
+    });
+    // add a timer
+    s.append(tm ? tm.cloneNode() : newEl('span', 'timer'));
+    // add page numbers
+    const n = newEl('span', 'page-number');
+    n.innerText = i + 1 + '/' + N;
+    n.onclick = e => location.hash = i + 1;
+    s.append(n);
+    // apply slide attributes in <!--# -->
+    for (let k in s.childNodes) {
+      const node = s.childNodes[k];
+      if (node.nodeType !== Node.COMMENT_NODE) continue;
+      let t = node.textContent;
+      if (!/^#/.test(t)) continue;
+      t = t.replace(/^#/, '');
+      const r = /[\s\n]class="([^"]+)"/, m = t.match(r);
+      if (m) {
+        t = t.replace(r, '').trim();
+        s.className += ' ' + m[1];
+      }
+      if (t) setAttr(s, t);
+      break;
+    }
+    s.classList.contains('extend') && s.append(newEl('div', 'spacer fade'));
+    location.hash === ('#' + (i + 1)) && s.scrollIntoView();
+    s.addEventListener('click', e => {
+      if (!e.altKey) return;
+      d.body.classList.toggle('overview');
+      setTimeout(() => e.target.scrollIntoView(), 100);
+    });
+    });
+    [...d.querySelectorAll('a.footnote-backref'), fn, tm].forEach(el => el?.remove());
+    const tms = d.querySelectorAll('span.timer'), t1 = 1000 * tms[0].dataset.total;
+    let t0;
+    function startTimers() {
+    t0 = new Date();
+    setInterval(setTimers, 1000);
+    }
+    function setTimers() {
+    let t = (new Date() - t0);
+    if (t1) t = t1 - t;
+    const t2 = new Date(Math.abs(t)).toISOString().substr(11, 8).replace(/^00:/, '');
+    tms.forEach(el => {
+      el.innerText = t2;
+      if (t < 0) el.style.display = el.style.display === 'none' ? '' : 'none';
+    });
+    }
+    // press f for fullscreen mode
+    d.addEventListener('keyup', (e) => {
+    if (e.target !== d.body) return;
+    e.key === 'f' && d.documentElement.requestFullscreen();
+    e.key === 'o' && d.body.classList.toggle('overview');
+    e.key === 'm' && d.body.classList.toggle('mirrored');
+    sessionStorage.setItem('body-class', d.body.className);
+    });
+    // start timer on fullscreen
+    d.onfullscreenchange = (e) => d.fullscreenElement && !t0 && startTimers();
+    tms.forEach(el => el.addEventListener('click', e => startTimers()));
+    // restore previsouly saved body class
+    const bc = sessionStorage.getItem('body-class');
+    if (bc) d.body.className += ' ' + bc;
+    })(document);
+    </script> 
+    <script src=
+    "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"
+    defer type="text/javascript">
+    </script> 
+    <script src=
+    "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"
+    defer type="text/javascript">
+    </script> 
+
+    <script src=
+    "https://cdn.jsdelivr.net/combine/npm/@xiee/utils/js/key-buttons.min.js,npm/@xiee/utils/js/external-link.min.js,npm/@xiee/utils/js/heading-anchor.min.js"
+    defer type="text/javascript">
+    </script>
+</body>
+</html>
