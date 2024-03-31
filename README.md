@@ -8,6 +8,8 @@ uses CSS from Yihui Xie's [Snap Slides].
 I don't claim this is suitable for anybody or anything but I like the
 simplicity of the approach.
 
+![example](example.jpg)
+
 ## Slide Organisation
 
 Read [Snap Slides] for details and look at [example.md](example.md) for
