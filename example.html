@@ -254,6 +254,8 @@ body {
   <link rel="stylesheet" href=
   "https://cdn.jsdelivr.net/combine/npm/@xiee/utils/css/key-buttons.min.css,npm/@xiee/utils/css/heading-anchor.min.css"
   type="text/css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -344,6 +346,16 @@ Markdown implementation in C:</p>
 and &frac34;. Likewise &trade;. How about links to <a href="https://github.com">GitHub</a>?</p>
 
 <p><img src="https://placehold.co/600x400" alt="Image" /></p>
+
+<a name="Math"></a>
+<h2>Math</h2>
+
+<p>Typesetting math is supported by <a href="https://www.mathjax.org">MathJax</a>. We might have to be careful
+about substiutions made by <code>theme</code>.</p>
+
+<p>$$
+\sigma = \sqrt\frac{\sum{(X-\mu)^2}}{N}
+$$</p>
 
 <script type="text/javascript">
 (function(d) {

@@ -254,6 +254,8 @@ body {
   <link rel="stylesheet" href=
   "https://cdn.jsdelivr.net/combine/npm/@xiee/utils/css/key-buttons.min.css,npm/@xiee/utils/css/heading-anchor.min.css"
   type="text/css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>

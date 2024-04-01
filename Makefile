@@ -1,5 +1,7 @@
 
 
+C = -superscript
+
 HTML += example.html
 
 all: $(HTML)
@@ -7,6 +9,6 @@ all: $(HTML)
 $(HTML): slides.theme
 
 %.html: %.md
-	theme -t slides.theme $<
+	theme -c $(C) -t slides.theme $<
 
 

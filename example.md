@@ -44,5 +44,15 @@ and 3/4. Likewise (tm). How about links to [GitHub]?
 
 ![Image](https://placehold.co/600x400)
 
-[GitHub]: https://github.com
+## Math
+
+Typesetting math is supported by [MathJax]. We might have to be careful
+about substiutions made by `theme`.
+
+$$
+\sigma = \sqrt\frac{\sum{(X-\mu)^2}}{N}
+$$
+
+[MathJax]:  https://www.mathjax.org
+[GitHub]:   https://github.com
 
