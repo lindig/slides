@@ -82,7 +82,7 @@ body {
   line-height: 1.5;
   box-sizing: border-box;
   background-color: #fffff8;
-  color: #111;
+  color: #273440;
   }
   body, .footnotes, code { font-size: .9em; }
   li li { font-size: .95em; }
@@ -104,7 +104,7 @@ body {
   overflow-x: auto;
   }
   code { font-family: Menlo, Consolas, Courier, monospace; }
-  :not(pre) > code, code[class] { background-color: #F8F8F8; }
+  :not(pre) > code, code[class] { font-weight: bold; }
   code.language-undefined, pre > code:not([class]) {
   background-color: rgba(0,0,0, 0.1);
   /* border: 1px solid #eee; */
@@ -162,7 +162,7 @@ body {
   max-width: fit-content;
   padding: 0;
   }
-  a { color: #eb4a47; text-decoration: none; }
+  a { color: #3C7AB5; text-decoration: none; }
   :not(pre) > code { background-color: #fdfded; }
   #TOC { columns: 2; }
   #TOC::before {
@@ -264,29 +264,49 @@ body {
 
 <p><a href="mailto:lindig@gmail.com"><em>Christian Lindig</em></a></p>
 
-<p><img src="https://placehold.co/600x400" alt="Image" /></p>
+<p><img src="img/xenserver-full-color-rgb.svg" alt="XenServer" /></p>
 
-<a name="Generating-HTML"></a>
-<h2>Generating HTML</h2>
+<a name="What-I-Need"></a>
+<h2>What I Need</h2>
 
-<p>Processing the slides using <code>theme</code> from <a href="https://www.pell.portland.or.us/~orc/Code/discount/">Discount</a>, a
-Markdown implementation in C:</p>
-
-<pre><code>    theme -f slides.theme example.md
-</code></pre>
-
-<a name="Organisation"></a>
-<h2>Organisation</h2>
+<a name="Basics"></a>
+<h3>Basics</h3>
 
 <ul>
-<li>Each H2 header introduces a new slide</li>
-<li>The result is a single HTML file</li>
-<li>Scrolling snaps to slides</li>
+<li><em>Emphasis</em> and <strong>more emphasis</strong></li>
+<li>In-line <code>code</code> and links <a href="https://cloud.com">Cloud Software Group</a></li>
 </ul>
 
 
+<blockquote><p>Only when the tide goes out do you discover who&rsquo;s been swimming naked.
+&ndash; Warren Buffet</p></blockquote>
+
+<a name="Images"></a>
+<h3>Images</h3>
+
+<p><img src="https://placehold.co/600x400" alt="Image" /></p>
+
+<a name="What-I-Need"></a>
+<h2>What I Need</h2>
+
+<a name="Math"></a>
+<h3>Math</h3>
+
+<p>$$
+n! = \cases{ 1 &amp; n = 0\cr
+  (n-1)! \times n &amp; n > 0}
+$$</p>
+
+<a name="Code"></a>
+<h3>Code</h3>
+
+<pre><code>    let rec fac = function
+      | n when n &lt;= 0 -&gt; 1
+      | n -&gt; fac (n-1) * n
+</code></pre>
+
 <a name="Tables"></a>
-<h2>Tables</h2>
+<h3>Tables</h3>
 
 <table>
 <thead>
@@ -313,49 +333,98 @@ Markdown implementation in C:</p>
 <td>WCH Chungju, Korea          </td>
 </tr>
 <tr>
-<td>2014</td>
-<td>WCH Amsterdam, NED          </td>
-</tr>
-<tr>
-<td>2015</td>
-<td>WCH Aiguebelette, France    </td>
-</tr>
-<tr>
-<td>2016</td>
-<td>WCHIE Rotterdam, Netherlands</td>
-</tr>
-<tr>
-<td>2016</td>
-<td>WCH Rotterdam, Netherlands  </td>
-</tr>
-<tr>
-<td>2017</td>
-<td>WCH Sarasota-Bradenton, USA </td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 
 
-<a name="Markdown-Basics"></a>
-<h2>Markdown Basics</h2>
+<a name="Goals-and-Non-2d-Goals"></a>
+<h2>Goals and Non-Goals</h2>
 
-<blockquote><p>Only when the tide goes out do you discover who&rsquo;s been swimming naked.
-&ndash; Warren Buffet</p></blockquote>
+<a name="Important"></a>
+<h3>Important</h3>
 
-<p>A paragraph with <em>italic</em> and <strong>bold</strong> emphasis. Some niceties here: &frac12;
-and &frac34;. Likewise &trade;. How about links to <a href="https://github.com">GitHub</a>?</p>
+<ul>
+<li>Presenting from a web browser</li>
+<li>Easy to share</li>
+<li>Efficiency</li>
+<li>Simplicity</li>
+</ul>
 
-<p><img src="https://placehold.co/600x400" alt="Image" /></p>
 
-<a name="Math"></a>
-<h2>Math</h2>
+<a name="Not-Important"></a>
+<h3>Not Important</h3>
 
-<p>Typesetting math is supported by <a href="https://www.mathjax.org">MathJax</a>. We might have to be careful
-about substiutions made by <code>theme</code>.</p>
+<ul>
+<li>Animations, videos</li>
+<li>Corporate branding</li>
+<li>Sizzle</li>
+</ul>
 
-<p>$$
-\sigma = \sqrt\frac{\sum{(X-\mu)^2}}{N}
-$$</p>
+
+<a name="Avoiding"></a>
+<h3>Avoiding</h3>
+
+<ul>
+<li>Proprietary tools like Keynote and PowerPoint</li>
+<li>Complex dependencies (install <code>npm</code> and web frontend frameworks)</li>
+</ul>
+
+
+<a name="Discount"></a>
+<h2>Discount</h2>
+
+<p><a href="https://www.pell.portland.or.us/~orc/Code/discount/">Discount</a> is a Markdown library and processor written in C that can be
+installed from a package manager.</p>
+
+<p>Besides <code>markdown</code> it installs a <code>theme</code> command that can be used to
+inject HTML generated from a markdown file into a template.</p>
+
+<pre><code>    theme -f slides.theme example.md
+</code></pre>
+
+<a name="Three-Steps"></a>
+<h3>Three Steps</h3>
+
+<ul>
+<li><code>example.md</code> contains the content</li>
+<li><code>slide.theme</code> provides the styling</li>
+<li>There is no third step</li>
+</ul>
+
+
+<a name="Organisation"></a>
+<h2>Organisation</h2>
+
+<ul>
+<li>Each H2 header introduces a new slide</li>
+<li>The result is a single HTML file</li>
+<li>The HTML file can be shared and printed</li>
+<li>Scrolling snaps to slides</li>
+<li><p>Overlong slides are not a problem</p>
+
+<pre><code>  ## Math
+
+  Typesetting math is supported by [MathJax]. We might have to 
+  be careful about substiutions made by `theme`.
+
+  $$
+  \sigma = \sqrt\frac{\sum{(X-\mu)^2}}{N}
+  $$
+
+  [MathJax]:  https://www.mathjax.org
+</code></pre></li>
+</ul>
+
+
+<a name="Like-and-Subscribe"></a>
+<h2>Like and Subscribe</h2>
+
+<p>Get it at <a href="https://github.com/lindig/slides">github.com/lindig/slides</a></p>
+
+<p><img src="img/github.png" alt="GithUb" /></p>
 
 <script type="text/javascript">
 (function(d) {

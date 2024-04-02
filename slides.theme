@@ -82,7 +82,7 @@ body {
   line-height: 1.5;
   box-sizing: border-box;
   background-color: #fffff8;
-  color: #111;
+  color: #273440;
   }
   body, .footnotes, code { font-size: .9em; }
   li li { font-size: .95em; }
@@ -104,7 +104,7 @@ body {
   overflow-x: auto;
   }
   code { font-family: Menlo, Consolas, Courier, monospace; }
-  :not(pre) > code, code[class] { background-color: #F8F8F8; }
+  :not(pre) > code, code[class] { font-weight: bold; }
   code.language-undefined, pre > code:not([class]) {
   background-color: rgba(0,0,0, 0.1);
   /* border: 1px solid #eee; */
@@ -162,7 +162,7 @@ body {
   max-width: fit-content;
   padding: 0;
   }
-  a { color: #eb4a47; text-decoration: none; }
+  a { color: #3C7AB5; text-decoration: none; }
   :not(pre) > code { background-color: #fdfded; }
   #TOC { columns: 2; }
   #TOC::before {
