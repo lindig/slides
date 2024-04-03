@@ -73,7 +73,9 @@ installed from a package manager.
 Besides `markdown` it installs a `theme` command that can be used to
 inject HTML generated from a markdown file into a template.
 
-        theme -f slides.theme example.md
+        theme -c -superscript -f slides.theme example.md
+
+See also [Makefile](Makefile) to automate this further.
 
 ### Three Steps
 
