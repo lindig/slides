@@ -35,6 +35,7 @@ On Fedora the command is called `discount-theme`.
 Read [Snap Slides] for details and look at [example.md](example.md) for
 a starting point.
 
+[example.html]: example.html
 [example.md]:   example.md
 [markdown]:     http://daringfireball.net/projects/markdown
 [discount]:     https://www.pell.portland.or.us/~orc/Code/discount/
