@@ -104,7 +104,7 @@ body {
   overflow-x: auto;
   }
   code { font-family: Menlo, Consolas, Courier, monospace; }
-  :not(pre) > code, code[class] { background-color: #F8F8F8; }
+  /* :not(pre) > code, code[class] { background-color: #F8F8F8; } */
   code.language-undefined, pre > code:not([class]) {
   background-color: rgba(0,0,0, 0.1);
   /* border: 1px solid #eee; */
@@ -163,7 +163,7 @@ body {
   padding: 0;
   }
   a { color: #eb4a47; text-decoration: none; }
-  :not(pre) > code { background-color: #fdfded; }
+  :not(pre) > code { font-style: bold; }
   #TOC { columns: 2; }
   #TOC::before {
   font-size: 1.3em;
