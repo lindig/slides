@@ -10,7 +10,9 @@
 Processing the slides using `theme` from [Discount], a
 Markdown implementation in C:
 
-        theme -f slides.theme example.md
+        theme -c -superscript -f slides.theme example.md
+
+See also [Makefile](Makefile) to automate this further.
 
 [Discount]:     https://www.pell.portland.or.us/~orc/Code/discount/
 
